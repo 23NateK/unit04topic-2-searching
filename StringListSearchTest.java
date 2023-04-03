@@ -29,42 +29,42 @@ public class StringListSearchTest {
     }
     @Test
     public void testOrderedLinearSearch() {
-        ArrayList<Integer> inputItems;
-        int inputTerm;
+        ArrayList<String> inputItems;
+        String inputTerm;
         int expectedOutput;
         int actualOutput;
 
         // some positive numbers
-        inputItems = new ArrayList<>(Arrays.asList(1,3,4,5,6,7,8,9,23,24,36));
-        inputTerm = 2;
-        expectedOutput = -1;
+        inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        inputTerm = "the";
+        expectedOutput = 2;
         actualOutput = StringListSearch.orderedLinearSearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
         // some positive numbers
-        inputItems = new ArrayList<>(Arrays.asList(1,3,4,5,6,7,8,9,23,24,36));
-        inputTerm = 9;
-        expectedOutput = 7;
+        inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        inputTerm = "valley";
+        expectedOutput = -1;
         actualOutput = StringListSearch.orderedLinearSearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
 
     }
     @Test
     public void testOrderedBinarySearch() {
-        ArrayList<Integer> inputItems;
-        int inputTerm;
+        ArrayList<String> inputItems;
+        String inputTerm;
         int expectedOutput;
         int actualOutput;
 
         // some positive numbers
-        inputItems = new ArrayList<>(Arrays.asList(1,3,4,5,6,7,8,9,23,24,36));
-        inputTerm = 2;
-        expectedOutput = -1;
+        inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        inputTerm = "the";
+        expectedOutput = 2;
         actualOutput = StringListSearch.orderedBinarySearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
         // some positive numbers
-        inputItems = new ArrayList<>(Arrays.asList(1,3,4,5,6,7,8,9,23,24,36));
-        inputTerm = 9;
-        expectedOutput = 7;
+        inputItems = new ArrayList<>(Arrays.asList("is", "mountain", "the", "there"));
+        inputTerm = "valley";
+        expectedOutput = -1;
         actualOutput = StringListSearch.orderedBinarySearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
 
